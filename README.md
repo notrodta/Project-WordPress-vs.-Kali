@@ -3,7 +3,7 @@ Hacking wordpress
 
 # WordPress 2.5-4.6 - Authenticated Stored Cross-Site Scripting via Image Filename
 
-Summary: Used an XSS attack by renaming an image which includes <img src=a onerror=alert(document.cookie)> in its name. Upon viewing the image, onerror will trigger.
+Summary: Used an XSS attack by renaming an image which includes ```<img src=a onerror=alert(document.cookie)>``` in its name. Upon viewing the image, onerror will trigger.
 
 Vulnerability type: XSS
 WordPress version tested in: 4.2.0
@@ -12,7 +12,7 @@ Fixed in version 4.2.1
 GIF Walkthrough: https://imgur.com/a/3VgGqGIF Walkthrough: 
 
 Steps to recreate: 
-- Downloaded an image from online and renamed it: cengizhansahinsumofpwn<img src=a onerror=alert(document.cookie)>.jpg
+- Downloaded an image from online and renamed it: cengizhansahinsumofpwn```<img src=a onerror=alert(document.cookie)>```.jpg
 - On WordPress, upload the newly named image and post it
 - On Media tab, click on the image you just uploaded and click on "view attachment page"
 
@@ -35,7 +35,7 @@ Source:https://klikki.fi/adv/wordpress2.html
 
 # WordPress 3.3-4.7.4 - Large File Upload Error XSS
 
-Summary: Implementing XSS attack by uploading a png filename called "Dinosaurs secret life<img src=x onerror=alert(1)>.png". The png is over 20 MB, which will be too large to be accepted. An error will appear when the png is being uploaded due to exceeding size limit, which will also trigger the onerror alert.
+Summary: Implementing XSS attack by uploading a png filename called "Dinosaurs secret life```<img src=x onerror=alert(1)>```.png". The png is over 20 MB, which will be too large to be accepted. An error will appear when the png is being uploaded due to exceeding size limit, which will also trigger the onerror alert.
 
 Vulnerability type: XSS
 WordPress version tested in: 4.2.0
@@ -45,7 +45,7 @@ GIF Walkthrough: https://imgur.com/a/ZmR35
 
 Steps to recreate: 
 - Find a large file over 20mb
-- Rename the file to "Dinosaurs secret life<img src=x onerror=alert(1)>.png"
+- Rename the file to "Dinosaurs secret life```<img src=x onerror=alert(1)>```.png"
 - Upload the file as a new media post to prompt the onerror alert
 
 Source: https://hackerone.com/reports/203515
@@ -65,3 +65,5 @@ Steps to recreate:
 - Paste the text on the comment section of WordPress.
 
 Source: https://blog.sucuri.net/2015/08/persistent-xss-vulnerability-in-wordpress-explained.html
+
+
